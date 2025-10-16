@@ -1,0 +1,17 @@
+import {test,expect} from '@playwright/test'
+test('Mouse Actions',async({page})=>{
+    await page.goto("https://www.myntra.com/")
+    //await page.dragAndDrop("Drag Element","droptoLocatoion")
+    const about= await page.locator("//a[@class='myntraweb-sprite desktop-logo sprites-headerLogo ']")
+    await about.screenshot({path:"screenshots/logoMyntra.png"})
+    await about.click({button:"right"})
+    await page.screenshot({path:"screenshots/Myntra.png"})
+    await page.screenshot({path:"screenshots/MyntraFull.png", fullPage:true})
+    await about.dblclick()
+    await page.locator("//a[text()='Men' and @data-type='navElements']").hover()
+    await page.waitForTimeout(3000)
+    await page.keyboard.down("Shift")
+    await page.keyboard.press("2")
+    await page.keyboard.up("Shift")
+   // await page.keyboard.press("Esc")
+})
