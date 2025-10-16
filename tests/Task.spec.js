@@ -68,7 +68,7 @@ test('dropdown',async({page})=>{
     console.log(sel.textContent())
 })
 
-test.describe.skip('group1',async()=>{
+test.describe('group1',async()=>{
     //test('MainTask',async({page})=>{ 
     //test('test1',()=>{
     test('alert Task',async({page})=>{
@@ -112,7 +112,7 @@ test.describe.skip('group1',async()=>{
     await page.waitForTimeout(3000) }) 
 })
 
-test.only('Iframe',async({page})=>{
+test('Iframe',async({page})=>{
   await page.goto("https://letcode.in/frame")
   const frame=await page.frames()
   console.log("frame count :",await frame.length)

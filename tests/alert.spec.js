@@ -1,5 +1,5 @@
 import {test , expect} from '@playwright/test'
-test.skip('Simple alert',async({page})=>{
+test('Simple alert',async({page})=>{
     await page.goto("https://testautomationpractice.blogspot.com/")
 
     page.on('dialog',async dialog =>{
@@ -27,7 +27,7 @@ test('Confirmation alert',async({page})=>{
     await page.waitForTimeout(3000)
 })
 
-test.only('prompt alert',async({page})=>{
+test('prompt alert',async({page})=>{
     await page.goto("https://testautomationpractice.blogspot.com/")
 
     page.on('dialog',async dialog =>{

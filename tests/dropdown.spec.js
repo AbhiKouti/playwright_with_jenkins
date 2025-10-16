@@ -9,13 +9,13 @@ test("single selcet dropdown",async({page})=>{
     //await page.locator('//select[@id="country"]').selectOption("india")
     //await page.locator('//select[@id="country"]').selectOption({value:"canada"})
     await page.locator('//select[@id="country"]').selectOption({index:3})
-    await page.pause()
+    //await page.pause()
 })
 
-test.skip("checkbox",async({page})=>{
+test("checkbox",async({page})=>{
     await page.goto('https://testautomationpractice.blogspot.com/')
 
     await page.locator('//select[@id="colors"]').selectOption(['Red','Blue','Yellow','Red'])
 
-    await page.pause()
+    //await page.pause()
 })

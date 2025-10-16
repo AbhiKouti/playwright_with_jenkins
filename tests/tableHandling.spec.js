@@ -1,6 +1,6 @@
 import {test , expect} from '@playwright/test'
 
-test ("webtable-handling",async({page})=>{
+test("webtable-handling",async({page})=>{
     await page.goto("https://qavbox.github.io/demo/webtable/");
     const cell = await page.locator("//table[@id='table02']/tbody/tr[10]/td[5]") ;//to print inside of a perticular cell in the table
     const cellTxt =await cell.textContent();

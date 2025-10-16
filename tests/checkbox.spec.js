@@ -1,15 +1,15 @@
 import { test, expect } from '@playwright/test';
-// test("radio button",async({page})=>{
-//     await page.goto('https://testautomationpractice.blogspot.com/')
-//     await page.locator('//input[@id="female"]').check()
-//     await expect(page.locator('//input[@id="female"]')).toBeChecked()
-//     //await expect(page.locator('//input[@id="male"]')).not.toBeChecked()
-//     await page.pause()
-//     await page.locator('//input[@id="female"]').uncheck()
-//     // await page.locator('//input[@id="sunday"]').check()
-//     // await expect(page.locator('//input[@id="sunday"]')).toBeChecked()
-//      await page.waitForTimeout(2000)
-// })
+test("radio button",async({page})=>{
+    await page.goto('https://testautomationpractice.blogspot.com/')
+    await page.locator('//input[@id="female"]').check()
+    await expect(page.locator('//input[@id="female"]')).toBeChecked()
+    //await expect(page.locator('//input[@id="male"]')).not.toBeChecked()
+    //await page.pause()
+    await page.locator('//input[@id="female"]').uncheck()
+    // await page.locator('//input[@id="sunday"]').check()
+    // await expect(page.locator('//input[@id="sunday"]')).toBeChecked()
+     await page.waitForTimeout(2000)
+})
 
 // test("checkbox",async({page})=>{
 //     await page.goto('https://testautomationpractice.blogspot.com/')
@@ -29,5 +29,5 @@ test("checkbox",async({page})=>{
         await page.locator(print).check()
         await expect(page.locator(print)).toBeChecked()
     }
-    await page.pause()
+    //await page.pause()
 })
